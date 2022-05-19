@@ -7,18 +7,18 @@ This repository contains [notes](https://github.com/Zero-Luminance/ads-c/tree/ma
 
 ## Contents:
 ### [Algorithms](https://github.com/Zero-Luminance/ads-c/tree/main/algorithms):
-1. #### Basic Searching:
+1. #### [Basic Searching](https://github.com/Zero-Luminance/ads-c/tree/main/algorithms/basic-searching):
     - Linear Search
     - Binary Search
 
-2. #### Basic Sorting:
+2. #### [Basic Sorting](https://github.com/Zero-Luminance/ads-c/tree/main/algorithms/basic-sorting):
     - Bubble Sort
 
 ### [Data Structures](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures):
-1. #### Arrays:
+1. #### [Arrays](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/arrays):
     - Fixed
     - Dynamic
     - Circular
-2. #### Linked Lists:
+2. #### [Linked Lists](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/linked-lists):
     - Singly (SLL)
     - Doubly (DLL)
