@@ -292,6 +292,7 @@ sll_iterative_reverse(sll_list_t *sll) {
 
     sll_node_t *curr, *prev, *next;
     curr = sll->head;
+    sll->head = sll->tail;
     sll->tail = curr;
     prev = (sll_node_t *)NULL;
 
@@ -302,7 +303,6 @@ sll_iterative_reverse(sll_list_t *sll) {
         prev = curr;
         curr = next;
     }
-    sll->head = prev;
 }
 
 /* -------------------------------------------------------------------------- */
