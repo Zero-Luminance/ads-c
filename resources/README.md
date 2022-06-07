@@ -13,9 +13,11 @@ Upon selecting & having learned a programming language there are other tools (se
 
 ## Useful Websites:
 - [LeetCode](https://leetcode.com/): Solve problems by implementing algorithms & data structures in various programming languages
-- Other resources related to C/C++, algorithms & data structures:
+- Websites:
     - [GeeksforGeeks](https://www.geeksforgeeks.org/)
     - [tutorialspoint](https://www.tutorialspoint.com/cprogramming/index.htm)
     - [Programiz](https://www.programiz.com/)
+- YouTube Channels:
+    - [NullPointer Exception](https://www.youtube.com/c/NullPointerException/playlists)
 
 ***NOTE: More resources will be readily added & updated so keep checking this directory regularly.***
