@@ -8,8 +8,8 @@
 5) [Example Implementations (Not Limited To) For Stacks & Queues](#example-implementations-not-limited-to-for-stacks--queues)
 
 ### Stacks & Queues Implementations
-- [Stacks](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-stack-files)
-- [Queues](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-queue-files)
+- [Singly Linked List Stack (SLLS)](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-stack-files)
+- [Singly Linked List Queues (SLLQ)](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-queue-files)
 
 ### Containers:
 - ‘Containers’ refers to data structures whose instances are collections of other objects with examples such as:
