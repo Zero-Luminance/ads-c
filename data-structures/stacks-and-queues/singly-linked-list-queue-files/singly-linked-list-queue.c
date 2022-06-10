@@ -1,10 +1,10 @@
 /**
- * @file    linked-list-queue.c
- * @brief   A file for linked list queue (LLQ) implementation
+ * @file    singly-linked-list-queue.c
+ * @brief   A file for linked list queue (SLLQ) implementation
  * @author  Jude Thaddeau Data (a.k.a Zero Luminance)
  * Github:  https://github.com/Zero-Luminance
  * @note    Before using this file REMEMBER to replace ALL instances of
- *          'void' associated with llq_node_t's 'data' component with
+ *          'void' associated with sllq_node_t's 'data' component with
  *          desired data type.
 */
 /* -------------------------------------------------------------------------- */
@@ -12,43 +12,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "linked-list-queue.h"
+#include "singly-linked-list-queue.h"
 
 /* -------------------------------------------------------------------------- */
 
 /**
- * @brief   CREATES an LLQ by initialising struct components
- * @return  A pointer to the address of the newly created & initalised LLQ
+ * @brief   CREATES an SLLQ by initialising struct components
+ * @return  A pointer to the address of the newly created & initalised SLLQ
 */
-llq_list_t* 
-llq_init(void) {
+sllq_list_t* 
+sllq_init(void) {
     
     // Create space for the list in the heap
-    llq_list_t *new_llq;
-    new_llq = (llq_list_t *)malloc(sizeof(llq_list_t));
-    assert(new_llq != NULL);
+    sllq_list_t *new_sllq;
+    new_sllq = (sllq_list_t *)malloc(sizeof(sllq_list_t));
+    assert(new_sllq != NULL);
 
     // Initialise parameters & return list address
-    new_llq->head = new_llq->tail = (llq_list_t *)NULL;
-    new_llq->length = EMPTY_LIST;
-    return new_llq;
+    new_sllq->head = new_sllq->tail = (sllq_list_t *)NULL;
+    new_sllq->length = EMPTY_LIST;
+    return new_sllq;
 }
 
 /* -------------------------------------------------------------------------- */
 
 /**
- * @brief       DELETES the LLQ by removing the list, it's nodes & data from
+ * @brief       DELETES the SLLQ by removing the list, it's nodes & data from
  *              the heap
- * @param[out]  llq     A pointer to the address of the LLQ to be deleted
+ * @param[out]  sllq     A pointer to the address of the SLLQ to be deleted
 */
 void 
-llq_free(llq_list_t *llq) {
+sllq_free(sllq_list_t *sllq) {
 
-    // Temporary nodes to traverse the LLQ
-    llq_node_t *current_node = llq->head;
-    llq_node_t *next_node;
+    // Temporary nodes to traverse the SLLQ
+    sllq_node_t *current_node = sllq->head;
+    sllq_node_t *next_node;
 
-    // Traverse the LLQ from the start & free contents from the heap
+    // Traverse the SLLQ from the start & free contents from the heap
     while (current_node != NULL) {
         next_node = current_node->next;
         if (current_node->data != NULL) {
@@ -56,123 +56,123 @@ llq_free(llq_list_t *llq) {
         }
         free(current_node);
         current_node = next_node;
-        llq->length--;
+        sllq->length--;
     }
     // Free the list from the heap
-    free(llq);
+    free(sllq);
 }
 
 /* -------------------------------------------------------------------------- */
 
 /**
- * @brief       RETURNS an integer flag if the LLQ has no nodes
- * @param[in]   llq     A pointer to the LLQ whose length needs to be checked
- * @return      0 if LLQ has ZERO nodes
- *              1 if LLQ has at least ONE node
+ * @brief       RETURNS an integer flag if the SLLQ has no nodes
+ * @param[in]   sllq     A pointer to the SLLQ whose length needs to be checked
+ * @return      0 if SLLQ has ZERO nodes
+ *              1 if SLLQ has at least ONE node
 */
 int 
-llq_is_empty(llq_list_t *llq) {
-    assert(llq != NULL);
-    return (llq->length == EMPTY_LIST);
+sllq_is_empty(sllq_list_t *sllq) {
+    assert(sllq != NULL);
+    return (sllq->length == EMPTY_LIST);
 }
 
 /* -------------------------------------------------------------------------- */
 
 /**
- * @brief       INSERTS a new node at the TAIL (i.e. END) of the LLQ
- * @param[out]  llq         The linked list queue to recieve a new node
+ * @brief       INSERTS a new node at the TAIL (i.e. END) of the SLLQ
+ * @param[out]  sllq         The linked list queue to recieve a new node
  * @param[in]   new_data    The data to be added as part of the new node
- * @return      A pointer to the address of the new added LLQ node or NULL
+ * @return      A pointer to the address of the new added SLLQ node or NULL
 */
-llq_node_t* 
-llq_enqueue(llq_list_t *llq, void *new_data) {
+sllq_node_t* 
+sllq_enqueue(sllq_list_t *sllq, void *new_data) {
     
-    llq_node_t *new_tail;
-    new_tail = (llq_node_t *)malloc(sizeof(llq_node_t));
+    sllq_node_t *new_tail;
+    new_tail = (sllq_node_t *)malloc(sizeof(sllq_node_t));
     assert(new_tail != NULL);
     new_tail->data = new_data;
-    new_tail->next = (llq_node_t *)NULL;
+    new_tail->next = (sllq_node_t *)NULL;
 
     // CASE 1: Linked list queue is EMPTY
-    if (llq->tail == NULL) {
-        llq->head = llq->tail = new_tail;
+    if (sllq->tail == NULL) {
+        sllq->head = sllq->tail = new_tail;
 
     // CASE 2: Linked list queue has at LEAST 1 node
     } else {
-        llq->tail->next = new_tail;
-        llq->tail = new_tail;
+        sllq->tail->next = new_tail;
+        sllq->tail = new_tail;
     }
-    llq->length++;
-    return llq->tail;
+    sllq->length++;
+    return sllq->tail;
 }
 
 /* -------------------------------------------------------------------------- */
 
 /**
- * @brief       REMOVES the HEAD (i.e FIRST) node of the LLQ
- * @param[out]  llq     The linked list queue to have the head node deleted
- * @return      The new HEAD node of the LLQ
+ * @brief       REMOVES the HEAD (i.e FIRST) node of the SLLQ
+ * @param[out]  sllq     The linked list queue to have the head node deleted
+ * @return      The new HEAD node of the SLLQ
 */
-llq_node_t* 
-llq_dequeue(llq_list_t *llq) {
+sllq_node_t* 
+sllq_dequeue(sllq_list_t *sllq) {
 
-    llq_node_t *old_head, *tmp;
-    assert((llq != NULL) && (llq->head != NULL));
-    old_head = llq->head;
-    llq->head = llq->head->next;
+    sllq_node_t *old_head, *tmp;
+    assert((sllq != NULL) && (sllq->head != NULL));
+    old_head = sllq->head;
+    sllq->head = sllq->head->next;
 
     // EXCEPTION: 1 node in the LLQ remains
-    if (llq->tail == NULL) {
-        llq->tail = (llq_node_t *)NULL;
+    if (sllq->tail == NULL) {
+        sllq->tail = (sllq_node_t *)NULL;
     }
     free(old_head);
-    llq->length--;
-    return llq->head;
+    sllq->length--;
+    return sllq->head;
 }
 
 /* -------------------------------------------------------------------------- */
 
 /**
- * @brief       RETURNS the HEAD (i.e. FIRST) node in the LLQ
- * @param[in]   llq     The LLQ with the desired HEAD node
- * @return      A pointer to the FIRST node of the LLQ
+ * @brief       RETURNS the HEAD (i.e. FIRST) node in the SLLQ
+ * @param[in]   sllq     The SLLQ with the desired HEAD node
+ * @return      A pointer to the FIRST node of the SLLQ
 */
-llq_node_t *llq_get_head(llq_list_t *llq) {
-    assert((llq != NULL) && (llq->head != NULL));
-    return llq->head;
+sllq_node_t *sllq_get_head(sllq_list_t *sllq) {
+    assert((sllq != NULL) && (sllq->head != NULL));
+    return sllq->head;
 }
 
 /* -------------------------------------------------------------------------- */
 
 /**
- * @brief       RETURNS the TAIL (i.e. LAST) node in the LLQ
- * @param[in]   llq     The LLQ with the desired TAIL node
- * @return      A pointer to the LAST node of the LLQ
+ * @brief       RETURNS the TAIL (i.e. LAST) node in the SLLQ
+ * @param[in]   sllq     The SLLQ with the desired TAIL node
+ * @return      A pointer to the LAST node of the SLLQ
 */
-llq_node_t* 
-llq_get_tail(llq_list_t *llq) {
-    assert((llq != NULL) && (llq->tail != NULL));
-    return llq->tail;
+sllq_node_t* 
+sllq_get_tail(sllq_list_t *sllq) {
+    assert((sllq != NULL) && (sllq->tail != NULL));
+    return sllq->tail;
 }
 
 /* -------------------------------------------------------------------------- */
 
 /**
  * @brief       SEARCHES & returns a node that matches the target search data
- * @param[in]   llq             The LLQ whose data content needs searching
+ * @param[in]   sllq             The SLLQ whose data content needs searching
  * @param[in]   cmp_fn          A POINTER FUNCTION allow comparison of 
  *                              different data types
- * @param[in]   target_data     Target search data that might be in the LLQ
+ * @param[in]   target_data     Target search data that might be in the SLLQ
  * @return      A pointer to the node that matches the target search data, OR
- *              A llq_node_t NULL value to indicate that no matches were found
+ *              A sllq_node_t NULL value to indicate that no matches were found
 */
-llq_node_t* 
-llq_node_search(llq_list_t *llq, int (*cmp_fn)(void*, void*), void *target_data) {
+sllq_node_t* 
+sllq_node_search(sllq_list_t *sllq, int (*cmp_fn)(void*, void*), void *target_data) {
 
-    llq_node_t *current_node;
-    current_node = llq->head;
+    sllq_node_t *current_node;
+    current_node = sllq->head;
 
-    // Linear search the LLQ up to the TAIL node
+    // Linear search the SLLQ up to the TAIL node
     while (current_node->next != NULL) {
 
         /* Assumed return values for cmp_fn:
@@ -186,7 +186,7 @@ llq_node_search(llq_list_t *llq, int (*cmp_fn)(void*, void*), void *target_data)
         current_node = current_node->next;
     }
     // No matches detected
-    return (llq_node_t *)NULL;
+    return (sllq_node_t *)NULL;
 }
 
 /* -------------------------------------------------------------------------- */

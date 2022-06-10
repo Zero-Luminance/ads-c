@@ -1,10 +1,10 @@
 /**
- * @file    linked-list-queue.h
- * @brief   A header file for linked list queue (LLQ) implementation
+ * @file    singly-linked-list-queue.h
+ * @brief   A header file for linked list queue (SLLQ) implementation
  * @author  Jude Thaddeau Data (a.k.a Zero Luminance)
  * Github:  https://github.com/Zero-Luminance
  * @note    Before using this file REMEMBER to replace ALL instances of
- *          'void' associated with llq_node_t's 'data' component with
+ *          'void' associated with sllq_node_t's 'data' component with
  *          desired data type.
 */
 /* -------------------------------------------------------------------------- */
@@ -14,31 +14,31 @@
 
 /* -------------------------------------------------------------------------- */
 
-// Connecting these creates a LLQ:
-typedef struct llq_node_t {
+// Connecting these creates a SLLQ:
+typedef struct sllq_node_t {
     void                *data;      /* Replace 'void' with desired data type */
-    struct llq_node_t   *next;      /* The address of the next LLQ node */
-} llq_node_t;
+    struct sllq_node_t   *next;      /* The address of the next SLLQ node */
+} sllq_node_t;
 
-// Keeping track of LLQ data:
-typedef struct llq_list_t {
-    llq_node_t          *head;      /* Node at the START of the LLQ */
-    llq_node_t          *tail;      /* Node at the END of the LLQ */
-    unsigned int        length;     /* Number of LLQ nodes */
-} llq_list_t;
+// Keeping track of SLLQ data:
+typedef struct sllq_list_t {
+    sllq_node_t          *head;      /* Node at the START of the SLLQ */
+    sllq_node_t          *tail;      /* Node at the END of the SLLQ */
+    unsigned int        length;     /* Number of SLLQ nodes */
+} sllq_list_t;
 
 /* -------------------------------------------------------------------------- */
 
-// LLQ Operations:
-llq_list_t *llq_init(void);
-void llq_free(llq_list_t *llq);
-int llq_is_empty(llq_list_t *llq);
+// SLLQ Operations:
+sllq_list_t *sllq_init(void);
+void sllq_free(sllq_list_t *sllq);
+int sllq_is_empty(sllq_list_t *sllq);
 
-llq_node_t *llq_enqueue(llq_list_t *llq, void *new_data);
-llq_node_t *llq_dequeue(llq_list_t *llq);
+sllq_node_t *sllq_enqueue(sllq_list_t *sllq, void *new_data);
+sllq_node_t *sllq_dequeue(sllq_list_t *sllq);
 
-llq_node_t *llq_get_head(llq_list_t *llq);
-llq_node_t *llq_get_tail(llq_list_t *llq);
-llq_node_t *llq_node_search(llq_list_t *llq, int (*cmp_fn)(void*, void*), void *target_data);
+sllq_node_t *sllq_get_head(sllq_list_t *sllq);
+sllq_node_t *sllq_get_tail(sllq_list_t *sllq);
+sllq_node_t *sllq_node_search(sllq_list_t *sllq, int (*cmp_fn)(void*, void*), void *target_data);
 
 /* -------------------------------------------------------------------------- */
