@@ -8,9 +8,10 @@
 5) [Example Implementations (Not Limited To) For Stacks & Queues](#example-implementations-not-limited-to-for-stacks--queues)
 
 ### Stacks & Queues Implementations
+- [Stacks](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-stack-files)
+- [Queues](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-queue-files)
 
-
-### Containers
+### Containers:
 - ‘Containers’ refers to data structures whose instances are collections of other objects with examples such as:
 <table>
     <tr>
@@ -46,7 +47,7 @@
     - ‘Single Value Continuers’ stores data items separately & accessed via iteration
     - ‘Associative Containers’ uses key-value pairs to access & store data
 
-### Stacks (LIFO)
+### Stacks (LIFO):
 - ‘Stacks’ is an ABSTRACT data structure that RETRIEVES items using a ‘last-in, first-out’ (LIFO) approach
 - CIRCUMSTANCE: order of item retrieval does NOT matter
 <table>
@@ -69,7 +70,7 @@
 </figure>
 <br>
 
-### Queues (FIFO)
+### Queues (FIFO):
 - ‘Queue’ is an ABSTRACT data structure that RETRIEVES items using a ‘first-in, first-out’ (FIFO) approach
 - CIRCUMSTANCE: order of item retrieval MATTERS
 <table>
