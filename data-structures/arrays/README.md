@@ -8,9 +8,9 @@
 5) [Circular Arrays](#circular-arrays)
 
 ### Array Implementations:
-- [Static]()
-- [Dynamic]()
-- [Circular]()
+- [Static](https://github.com/Zero-Luminance/ads-c/blob/main/data-structures/arrays/fixed-array.c)
+- [Dynamic](https://github.com/Zero-Luminance/ads-c/blob/main/data-structures/arrays/dynamic-array.c)
+- [Circular](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/arrays/circular-array-files)
 
 ### Defining Arrays:
 - ***‘Arrays’*** are contiguous blocks of allocated memory of size ***’n’***, where each block is accessed through an _INDEX_ or _ADDRESS_
