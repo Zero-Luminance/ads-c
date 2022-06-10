@@ -26,7 +26,7 @@
 
 ![Types Of Data Structures](../assets/markdown-images/data-structures-diagrams.jpeg)
 
-## Contiguous Versus Linked Data Structures:
+### Contiguous Versus Linked Data Structures:
 - ***‘Contiguous’*** data structures are _SINGLE SLABS_ of memory & includes arrays, matrices, heaps & hash maps 
 - ***‘Linked’*** data structures are _DISTINCT CHUNKS_ of memory linked by pointers & includes lists, trees, graph adjacent lists, etc
 
