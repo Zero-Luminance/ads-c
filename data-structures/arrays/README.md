@@ -7,12 +7,12 @@
 4) [Dynamic Arrays](#dynamic-arrays)
 5) [Circular Arrays](#circular-arrays)
 
-### Array Implementations:
+## Array Implementations:
 - [Static](https://github.com/Zero-Luminance/ads-c/blob/main/data-structures/arrays/fixed-array.c)
 - [Dynamic](https://github.com/Zero-Luminance/ads-c/blob/main/data-structures/arrays/dynamic-array.c)
 - [Circular](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/arrays/circular-array-files)
 
-### Defining Arrays:
+## Defining Arrays:
 - ***‘Arrays’*** are contiguous blocks of allocated memory of size ***’n’***, where each block is accessed through an _INDEX_ or _ADDRESS_
 - Types Of Arrays: Fixed, Dynamic, Circular, etc
 <figure>
@@ -39,7 +39,7 @@
 </table>
 <br>
 
-### FIXED ARRAYS:
+## FIXED ARRAYS:
 - ***‘Fixed Arrays’*** are arrays declared with a _SET_ side that remains _UNCHANGEABLE_ throughout program execution
 - Runtimes:
 <table>
@@ -85,7 +85,7 @@
 </figure>
 <br>
 
-### DYNAMIC ARRAYS:
+## DYNAMIC ARRAYS:
 - ***‘Dynamic Arrays’*** or ***‘Array Lists’*** permits the declared array size to be _INCREASED_ during program execution in the event of no-space
 - ***‘Logical Size’*** refers to the number of elements a dynamic array has recorded
 - ***‘Physical Size’*** refers to the overall size of the array
@@ -101,7 +101,7 @@ Methodology Copying Operation:
     <figcaption>Source: <a href="https://www.geeksforgeeks.org/how-do-dynamic-arrays-work/">GeeksforGeeks</a></figcaption>
 </figure>
 
-### CIRCULAR ARRAYS:
+## CIRCULAR ARRAYS:
 - ***‘Circular Arrays’*** involves having the _FIRST_ element adjacent to the _LAST_ element
 - Given _GAPS_ in the circular array, elements can be safely traversed by visiting the ***(i%n)th*** element where:
     - ***‘i’*** indicates the current index in the iteration
