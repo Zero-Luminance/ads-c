@@ -14,7 +14,7 @@ These notes are largely derived from [The University Of Melbourne](https://en.wi
 - [Design Of Algorithms (COMP20007)](https://handbook.unimelb.edu.au/2022/subjects/comp20007)
 - [Algorithms & Data Structures (COMP20003)](https://handbook.unimelb.edu.au/2022/subjects/comp20003) 
 
-The aforementioned subjects utilised Steven S. Skiena's '[The Algorithm Design Manual](https://www.algorist.com/)' as a textbook. Additionally, the '[Introduction To Algorithms 3rd Edition](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)' was used to cover topics not found in the Skiena's textbook.
+The aforementioned subjects utilised Steven S. Skiena's '[The Algorithm Design Manual](https://www.algorist.com/)' as a textbook. Outside of the aforementioned subject curriculum, the '[Introduction To Algorithms 3rd Edition](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)' was also used to cover topics not found in Skiena's textbook.
 
 ## COMP20003 2022 Topic Outline:
 <table>
