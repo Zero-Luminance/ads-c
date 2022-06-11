@@ -37,38 +37,38 @@
 - NOTE: runtimes depend on the implementation (e.g. having a LIST ‘tail’ pointer would make BACK insertion & deletion O(1) constant time)
 <table>
     <tr>
-        <th scope="col" colspan="2">OPERATION:<th>
-        <th scope="col">COST & OPERATION:<th>
+        <th scope="col" colspan="2">OPERATION:</th>
+        <th scope="col">COST & OPERATION:</th>
     </tr>
     <tr>
-        <th scope="row"><i>RANDOM</i><th>
+        <th scope="row"><i>RANDOM</i></th>
         <th scope="row" rowspan="3">INSERTION</th>
         <td><b>O(n)</b> - need to traverse the ENTIRE SLL</td>
     </tr>
     <tr>
-        <th scope="row"><i>FRONT</i><th>
+        <th scope="row"><i>FRONT</i></th>
         <td><b>O(1)</b> - access header pointer</td>
     </tr>
     <tr>
-        <th scope="row"><i>BACK</i><th>
+        <th scope="row"><i>BACK</i></th>
         <td><b>O(n)</b> - same reason as random insertion</td>
     </tr>
     <tr>
-        <th scope="row"><i>RANDOM</i><th>
+        <th scope="row"><i>RANDOM</i></th>
         <th scope="row" rowspan="2">DELETION</th>
         <td><b>O(n)</b> - same as reason as random insertion</td>
     </tr>
     <tr>
-        <th scope="row"><i>FRONT</i><th>
+        <th scope="row"><i>FRONT</i></th>
         <td><b>O(1)</b> - same reason as front insertion</td>
     </tr>
     <tr>
-        <th scope="row"><i>UNSORTED</i><th>
+        <th scope="row"><i>UNSORTED</i></th>
         <th scope="row" rowspan="2">SEARCHING</th>
         <td rowspan="2"><b>O(n)</b> - sorted or unsorted does NOT matter, worst case requires the traversal of the ENTIRE SLL (i.e. data not found in SLL)</td>
     </tr>
     <tr>
-        <th scope="row"><i>SORTED</i><th>
+        <th scope="row"><i>SORTED</i></th>
     </tr>
 </table>
 <br>
