@@ -7,7 +7,7 @@
 4) [Queues](#queues-fifo)
 5) [Example Implementations (Not Limited To) For Stacks & Queues](#example-implementations-not-limited-to-for-stacks--queues)
 
-## Stacks & Queues Implementations
+## Stacks & Queues Implementations:
 - [Singly Linked List Stack (SLLS)](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-stack-files)
 - [Singly Linked List Queue (SLLQ)](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-queue-files)
 
