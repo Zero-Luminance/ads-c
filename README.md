@@ -1,24 +1,21 @@
 # ALGORITHMS & DATA STUCTURES (ADS)
 
+***NOTE: There is a good chance that you are viewing this repository in it's incomplete form. I apologise for any inconvenince & ask that viewers be patient as content will be slowly released/updated.***
+
 ## Description:
 This repository contains the following resources related to algorithms & data structures: 
 - [Notes](https://github.com/Zero-Luminance/ads-c/tree/main/ads-notes)
 - [Resources](https://github.com/Zero-Luminance/ads-c/tree/main/resources):
     - Concepts In C
     - Software Tools
-- [Implementations](#content) _(C programming language)_: see directory tree below
+- Implementations _(C programming language)_:
+    - [Algorithms](#algorithms)
+    - [Data Structures](#data-structures)
 
-The notes are largely derived from [The University Of Melbourne](https://en.wikipedia.org/wiki/University_of_Melbourne)'s 2022 [Design Of Algorithms (COMP20007)](https://handbook.unimelb.edu.au/2022/subjects/comp20007) & [Algorithms & Data Structures (COMP20003)](https://handbook.unimelb.edu.au/2022/subjects/comp20003) subjects which uses Steven S. Skiena's '[The Algorithm Design Manual](https://www.algorist.com/)' as a textbook.
-
-***NOTE: There is a good chance that you are viewing this repository in it's incomplete form. I apologise for any inconvenince & ask that viewers be patient as content will be slowly released/updated.***
-
-## Content:
-
-### [Algorithms](https://github.com/Zero-Luminance/ads-c/tree/main/algorithms):
+## [ALGORITHMS](https://github.com/Zero-Luminance/ads-c/tree/main/algorithms):
 1. [Basic Searching](https://github.com/Zero-Luminance/ads-c/tree/main/algorithms/basic-searching):
     - Linear Search
     - Binary Search
-
 2. [Basic Sorting](https://github.com/Zero-Luminance/ads-c/tree/main/algorithms/basic-sorting):
     - Bubblesort
     - Mergesort
@@ -28,7 +25,7 @@ The notes are largely derived from [The University Of Melbourne](https://en.wiki
     - Radix Sort
     - Bucket Sort
 
-### [Data Structures](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures):
+## [DATA STRUCTURES](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures):
 1. [Arrays](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/arrays):
     - Fixed
     - Dynamic
