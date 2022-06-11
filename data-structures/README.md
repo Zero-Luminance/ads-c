@@ -5,7 +5,7 @@
 2) [Defining Data Structures](#defining-data-structures)
 3) [Contiguous Versus Linked Data structures](#contiguous-versus-linked-data-structures)
 
-### Navigation:
+## Navigation:
 1. [Arrays](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/arrays):
     - Fixed
     - Dynamic
@@ -17,7 +17,7 @@
 3. [Stacks & Queues](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues)
 4. [Dictionaries](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/dictionaries)
 
-### Defining Data Structures:
+## Defining Data Structures:
 - ***‘Data Structures’*** involves methods of storing data so as to enable efficient ways of accessing or modifying said data
 - ***‘Abstract Data Type’*** is a blueprint description of a data structure but does NOT specify an implementation
     - Example: Stack & Queue (store set of items), Dictionary (look up item by key), & containers
@@ -28,7 +28,7 @@
     <figcaption text-align="center">Source: <a href="https://www.davidguida.net/know-your-data-structures-list-vs-dictionary-vs-hashset/">davidguida.net</a></figcaption>
 </figure>
 
-### Contiguous Versus Linked Data Structures:
+## Contiguous Versus Linked Data Structures:
 - ***‘Contiguous’*** data structures are _SINGLE SLABS_ of memory & includes arrays, matrices, heaps & hash maps 
 - ***‘Linked’*** data structures are _DISTINCT CHUNKS_ of memory linked by pointers & includes lists, trees, graph adjacent lists, etc
 
