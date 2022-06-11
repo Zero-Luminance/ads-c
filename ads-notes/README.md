@@ -4,12 +4,10 @@
 1) [Files](#files)
 2) [Description](#description)
 3) [COMP20003 Topic Outline](#comp20003-2022-topic-outline)
-<br>
 
 ## Files:
 - [comp20003-editable-notes.pages](https://github.com/Zero-Luminance/ads-c/blob/main/ads-notes/comp20003-editable-notes.pages)
 - comp20003-notes.pdf (NOT YET AVAILABLE)
-<br>
 
 ## Description:
 These notes are largely derived from [The University Of Melbourne](https://en.wikipedia.org/wiki/University_of_Melbourne)'s 2022:
@@ -17,7 +15,6 @@ These notes are largely derived from [The University Of Melbourne](https://en.wi
 - [Algorithms & Data Structures (COMP20003)](https://handbook.unimelb.edu.au/2022/subjects/comp20003) 
 
 The aforementioned subjects utilised Steven S. Skiena's '[The Algorithm Design Manual](https://www.algorist.com/)' as a textbook. Additionally, the '[Introduction To Algorithms 3rd Edition](https://mitpress.mit.edu/books/introduction-algorithms-third-edition)' was used to cover topics not found in the Skiena's textbook.
-<br>
 
 ## COMP20003 2022 Topic Outline:
 <table>
