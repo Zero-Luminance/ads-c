@@ -24,7 +24,7 @@
 - ***‘Concrete Data Structure’*** are implementations of abstract data types
     - Example: dynamic array, linked lists, binary search trees, etc
 <figure>
-    <img src="../assets/markdown-images/data-structures-diagrams.jpeg" alt="Diagrams of different data structure diagrams">
+    <img src="../assets/markdown-images/data-structure-images/data-structures-diagrams.jpeg" alt="Diagrams of different data structure diagrams">
     <figcaption text-align="center">Source: <a href="https://www.davidguida.net/know-your-data-structures-list-vs-dictionary-vs-hashset/">davidguida.net</a></figcaption>
 </figure>
 
@@ -33,6 +33,6 @@
 - ***‘Linked’*** data structures are _DISTINCT CHUNKS_ of memory linked by pointers & includes lists, trees, graph adjacent lists, etc
 
 <figure>
-    <img src="../assets/markdown-images/contiguous-vs-linked-ds.png" alt="Array (contigious) Versus Linked List (Linked)">
+    <img src="../assets/markdown-images/data-structure-images/contiguous-vs-linked-ds.png" alt="Array (contigious) Versus Linked List (Linked)">
     <figcaption text-align="center">Source: <a href="https://beginnersbook.com/2018/10/data-structure-array/">beginnersbook.com</a></figcaption>
 </figure>

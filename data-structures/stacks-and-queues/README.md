@@ -65,7 +65,7 @@
     </tr>
 </table>
 <figure>
-    <img src="../../assets/markdown-images/stack-diagram.png" alt="Stack Diagram">
+    <img src="../../assets/markdown-images/stacks-and-queues-images/stack-diagram.png" alt="Stack Diagram">
     <figcaption>Source: <a href="https://laptrinhx.com/stacks-and-queues-simplified-1889506540/">LaptrinhX</a></figcaption>
 </figure>
 <br>
@@ -88,7 +88,7 @@
     </tr>
 </table>
 <figure>
-    <img src="../../assets/markdown-images/queue-diagram.jpeg" alt="Queue Diagram">
+    <img src="../../assets/markdown-images/stacks-and-queues-images/queue-diagram.jpeg" alt="Queue Diagram">
     <figcaption>Source: <a href="https://www.designveloper.com/blog/stacks-and-queues-data-structures/">Designveloper</a></figcaption>
 </figure>
 <br>

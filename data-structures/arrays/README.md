@@ -16,7 +16,7 @@
 - ***‘Arrays’*** are contiguous blocks of allocated memory of size ***’n’***, where each block is accessed through an _INDEX_ or _ADDRESS_
 - Types Of Arrays: Fixed, Dynamic, Circular, etc
 <figure>
-    <img src="../../assets/markdown-images/array-concept-diagram.jpeg" alt="Contiguous array diagram">
+    <img src="../../assets/markdown-images/array-images/array-concept-diagram.jpeg" alt="Contiguous array diagram">
     <figcaption>Source: <a href="https://www.guru99.com/array-data-structure.html">guru99.com</a></figcaption>
 </figure>
 <table>
@@ -80,7 +80,7 @@
     </tr>
 </table>
 <figure>
-    <img src="../../assets/markdown-images/fixed-array-diagram.jpg" alt="Fixed array diagram">
+    <img src="../../assets/markdown-images/array-images/fixed-array-diagram.jpg" alt="Fixed array diagram">
     <figcaption>Source: <a href="https://beginnersbook.com/2018/10/data-structure-array/">beginnersbook.com</a></figcaption>
 </figure>
 <br>
@@ -97,7 +97,7 @@ Methodology Copying Operation:
 4) Transfer the contents of the old array to the new array
 - NOTE: Increasing the physical size of an array by a geometric factor ensures that the ***‘copy’*** operation amortises _(averages)_ to a cost of ***O(1)***
 <figure>
-    <img src="../../assets/markdown-images/dynamic-array-diagram.png" alt="A dynamic array increasing it's size">
+    <img src="../../assets/markdown-images/array-images/dynamic-array-diagram.png" alt="A dynamic array increasing it's size">
     <figcaption>Source: <a href="https://www.geeksforgeeks.org/how-do-dynamic-arrays-work/">GeeksforGeeks</a></figcaption>
 </figure>
 
@@ -108,6 +108,6 @@ Methodology Copying Operation:
     - ***’n’*** is the circular array’s physical size
 - _ADVANTAGE_: ***O(n)*** time to traverse elements & ***O(1)*** memory space
 <figure>
-    <img src="../../assets/markdown-images/circular-array-diagram.png" alt="A circular array diagram">
+    <img src="../../assets/markdown-images/array-images/circular-array-diagram.png" alt="A circular array diagram">
     <figcaption>Source: <a href="http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/8-List/array-queue2.html">mathcs.emory.edu</a></figcaption>
 </figure>
