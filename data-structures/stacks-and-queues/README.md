@@ -12,7 +12,7 @@
 - [Singly Linked List Queue (SLLQ)](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues/singly-linked-list-queue-files)
 
 ## Containers:
-- ‘Containers’ refers to data structures whose instances are collections of other objects with examples such as:
+- ***‘Containers’*** refers to data structures whose instances are collections of other objects with examples such as:
 <table>
     <tr>
         <th scope="col">ABSTRACT Data Types:</th>
@@ -44,12 +44,12 @@
     </tr>
 </table>
 - Container Types:
-    - ‘Single Value Continuers’ stores data items separately & accessed via iteration
-    - ‘Associative Containers’ uses key-value pairs to access & store data
+    - ***‘Single Value Continuers’*** stores data items separately & accessed via iteration
+    - ***‘Associative Containers’*** uses key-value pairs to access & store data
 
 ## Stacks (LIFO):
-- ‘Stacks’ is an ABSTRACT data structure that RETRIEVES items using a ‘last-in, first-out’ (LIFO) approach
-- CIRCUMSTANCE: order of item retrieval does NOT matter
+- ***‘Stacks’*** is an _ABSTRACT_ data structure that _RETRIEVES_ items using a ***‘last-in, first-out’*** _(LIFO)_ approach
+- _CIRCUMSTANCE_: order of item retrieval does NOT matter
 <table>
     <tr>
         <th scope="col">STACK OPERATION:</th>
@@ -71,8 +71,8 @@
 <br>
 
 ## Queues (FIFO):
-- ‘Queue’ is an ABSTRACT data structure that RETRIEVES items using a ‘first-in, first-out’ (FIFO) approach
-- CIRCUMSTANCE: order of item retrieval MATTERS
+- ***‘Queue’*** is an _ABSTRACT_ data structure that _RETRIEVES_ items using a ***‘first-in, first-out’*** _(FIFO)_ approach
+- _CIRCUMSTANCE_: order of item retrieval MATTERS
 <table>
     <tr>
         <th scope="col">QUEUE OPERATION:</th>

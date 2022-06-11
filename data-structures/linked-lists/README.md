@@ -10,12 +10,12 @@
 5) [Comparing Arrays & Linked Lists](#comparing-arrays--linked-lists)
 
 ## Introduction:
-- ‘Linked Lists’ are a sequence of nodes containing:
-    - Pointers to OTHER nodes (or NULL if end of sequence)
-    - INFORMATION of any valid data type (e.g. int, double, etc)
-- ‘Head’ is the FIRST node
-- ‘Tail’ or ‘Foot’ is the LAST node
-- BASIC OPERATIONS: searching, insertion, & deletion
+- ***‘Linked Lists’*** are a sequence of nodes containing:
+    - Pointers to _OTHER_ nodes (or _NULL_ if end of sequence)
+    - _INFORMATION_ of any valid data type (e.g. int, double, etc)
+- ***‘Head’*** is the FIRST node
+- ***‘Tail’*** or ***‘Foot’*** is the _LAST_ node
+- _BASIC OPERATIONS_: searching, insertion, & deletion
 - Variations: singly linked lists, doubly linked lists, circular linked lists
 - Other Implementations: Stacks, Queues, Dictionaries, etc...
 <figure>
@@ -25,7 +25,7 @@
 <br>
 
 ## SINGLY LINKED LISTS:
-- ‘Singly Linked Lists’ (SLL) only contain a SINGLE pointer variable that points to the NEXT node in the sequence
+- ***‘Singly Linked Lists’*** _(SLL)_ only contain a SINGLE pointer variable that points to the _NEXT_ node in the sequence
 - Diagram:
 <figure>
     <img src="../../assets/markdown-images/linked-list-images/singly-linked-list-diagram.png" alt="Singly Linked List Diagram">
@@ -34,7 +34,7 @@
 <br>
 
 ### SLL Operation Runtimes:
-- NOTE: runtimes depend on the implementation (e.g. having a LIST ‘tail’ pointer would make BACK insertion & deletion O(1) constant time)
+- NOTE: runtimes depend on the implementation (e.g. having a _LIST_ ***‘tail’*** pointer would make _BACK_ insertion & deletion ***O(1)*** constant time)
 <table>
     <tr>
         <th scope="col" colspan="2">OPERATION:</th>
@@ -74,7 +74,7 @@
 <br>
 
 ## DOUBLY LINKED LISTS:
-- ‘Doubly Linked Lists’ (DLL) contain TWO pointer variables that refer to the current node’s NEXT & PREVIOUS nodes
+- ***‘Doubly Linked Lists’*** _(DLL)_ contain _TWO_ pointer variables that refer to the current node’s _NEXT_ & _PREVIOUS_ nodes
 - Diagram:
 <figure>
     <img src="../../assets/markdown-images/linked-list-images/doubly-linked-list-diagram.png" alt="Doubly Linked List Diagram">
@@ -100,7 +100,7 @@
 <br>
 
 ## CIRCULAR LINKED LISTS:
-- ‘Circular Linked Lists’ (CLL) requires the TAIL node’s pointer to point BACK to the HEAD node (or vice versa if doubly too)
+- ***‘Circular Linked Lists’*** _(CLL)_ requires the _TAIL_ node’s pointer to point _BACK_ to the _HEAD_ node (or vice versa if doubly too)
 - Diagram:
 <figure>
     <img src="../../assets/markdown-images/linked-list-images/circular-linked-list-diagram.png" alt="Circular Linked List Diagram">
