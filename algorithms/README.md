@@ -170,12 +170,14 @@
     <img src="../assets/markdown-images/algorithm-images/big-oh-constants-p36.png" alt="Example application of Big-Oh">
     <figcaption>Source: The Algorithm Design Manual (Page 35 & 36), Steven S. Skiena</figcaption>
 </figure>
+
 - ***‘Big Omega’*** is the _LOWER_ bound of the exact complexity
 <figure>
     <img src="../assets/markdown-images/algorithm-images/big-omega-lower-bound-p35.png" alt="Big-Omega Definition">
     <img src="../assets/markdown-images/algorithm-images/big-omega-constans-p36.png" alt="Example application of Big-Omega">
     <figcaption>Source: The Algorithm Design Manual (Page 35 & 36), Steven S. Skiena</figcaption>
 </figure>
+
 - ***‘Big Theta’*** provides a _BOTH_ bounds _AROUND_ the exact complexity
 <figure>
     <img src="../assets/markdown-images/algorithm-images/big-theta-both-bounds-p35.png" alt="Big-Theta Definition">
@@ -260,6 +262,7 @@ Using Big Oh:
     <img src="../assets/markdown-images/algorithm-images/complexity-function-addition-p40.png" alt="Complexity Function Addition Rules">
     <figcaption>Source: The Algorithm Design Manual (Page 40), Steven S. Skiena</figcaption>
 </figure>
+
 - ***LOGIC***: as ***n->∞*** the dominant function contributes the _MOST_ growth in the dominance relation
 - The sum between functions of the _SAME CLASS_ results in the Big Oh of said class
 <figure>
@@ -273,6 +276,7 @@ Using Big Oh:
     <img src="../assets/markdown-images/algorithm-images/complexity-constant-function-multiplication-p40.png" alt="Complexity CONSTANT Function Multiplication Rules">
     <figcaption>Source: The Algorithm Design Manual (Page 40), Steven S. Skiena</figcaption>
 </figure>
+
 - ***‘Function Multiplication’*** results in _ALL_ functions combining to become a new dominant function:
 <figure>
     <img src="../assets/markdown-images/algorithm-images/complexity-function-multiplication-p41.png" alt="Complexity Function Multiplication Rules">
