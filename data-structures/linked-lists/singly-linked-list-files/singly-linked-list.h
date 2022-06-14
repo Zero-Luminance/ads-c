@@ -44,7 +44,7 @@ sll_node_t *sll_get_head(sll_list_t *sll);
 sll_node_t *sll_get_tail(sll_list_t *sll);
 sll_node_t *sll_node_search(sll_list_t *sll, int (*cmp_fn)(void*, void*), void *target_data);
 
-sll_node_t *sll_recursive_reverse(sll_node_t *sll_first);
+sll_node_t *sll_recursive_reverse(sll_list_t *sll, sll_node_t *first);
 void sll_iterative_reverse(sll_list_t *sll);
 
 /* -------------------------------------------------------------------------- */

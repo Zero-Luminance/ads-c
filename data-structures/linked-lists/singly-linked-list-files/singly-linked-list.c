@@ -95,7 +95,7 @@ sll_insert_head(sll_list_t *sll, void *new_data) {
     new_head = (sll_node_t *)malloc(sizeof(sll_node_t));
     assert((sll != NULL) && (new_head != NULL));
     new_head->data = new_data;
-    new_head = sll->head;
+    new_head->next = sll->head;
     sll->head = new_head;
 
     // EXCEPTION: 1st insertion into the SLL
@@ -259,26 +259,34 @@ sll_node_search(sll_list_t *sll, int (*cmp_fn)(void*, void*), void *target_data)
 
 /**
  * @brief       RECURSIVELY reverses the node ORDER in a SLL
- * @param[out]  sll_first   The HEAD of the SLL
- * @note        Call function like: sll_recursive_reverse(sll->head);
+ * @param[out]  sll     The SLL whose nodes are to be reversed
+ * @param[in]   first   The 1st node in the input SLL
+ * @note        Call function as: sll_recursive_reverse(sll, sll->head);
  * Credits:     https://stackoverflow.com/questions/14080758/reversing-a-linkedlist-recursively-in-c
 */
 sll_node_t* 
-sll_recursive_reverse(sll_node_t *sll_first) {
+sll_recursive_reverse(sll_list_t *sll, sll_node_t *first) {
 
-    // CASE 1: The SLL is too SHORT or does NOT exist
-    if (sll_first == NULL) {
-        return (sll_node_t *)NULL;
+    // SLL is EMPTY:
+    if (first == NULL) return NULL;
 
-    // CASE 2: Recursively reached the TAIL node
-    } else if (sll_first->next == NULL) {
-        return sll_first;
+    // BASE CASE: 1 node remains in SLL:
+    if (first->next == NULL) {
+        sll->tail = sll->head;
+        sll->head = first;
+        return first;
     }
-    // Recursively traverse the SLL to the TAIL node & then adjust REST nodes
-    sll_node_t *sll_rest = sll_recursive_reverse(sll_first->next);
-    sll_first->next->next = sll_first;
-    sll_first->next = (sll_node_t *)NULL;
-    return sll_rest;
+    /* RECURSIVE CASE: Keep traversing SLL to TAIL node */
+    sll_node_t *rest = sll_recursive_reverse(sll, first->next);
+
+    /* NOTES: 
+        - Code below this line only executes when base-case returns a value
+        - We now traverse the SLL BACKWARDS while adjusting the .next pointers
+        - 'rest' will continue to ALWAYS point to the NEW HEAD node
+    */
+    first->next->next = first;
+    first->next = NULL;
+    return rest;
 }
 
 /* -------------------------------------------------------------------------- */
