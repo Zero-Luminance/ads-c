@@ -45,6 +45,7 @@ dll_node_t *dll_get_head(dll_list_t *dll);
 dll_node_t *dll_get_tail(dll_list_t *dll);
 dll_node_t *dll_node_search(dll_list_t *dll, int (*cmp_fn)(void*, void*), void *target_data);
 
+dll_node_t *dll_recursive_reverse(dll_list_t *dll, dll_node_t *first);
 void dll_iterative_reverse(dll_list_t *dll);
 
 /* -------------------------------------------------------------------------- */
