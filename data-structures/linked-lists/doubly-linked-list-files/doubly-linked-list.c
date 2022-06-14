@@ -30,7 +30,6 @@ dll_init(void) {
 
     // Initialise parameters & return list address
     new_dll->head = new_dll->tail = (dll_node_t *)NULL;
-    new_dll->length = EMPTY_LIST;
     return new_dll;
 }
 
@@ -57,7 +56,6 @@ dll_free(dll_list_t *dll) {
         }
         free(current_node);
         current_node = next_node;
-        dll->length--;
     }
     // Free the list from the heap
     free(dll);
@@ -68,13 +66,13 @@ dll_free(dll_list_t *dll) {
 /**
  * @brief       Returns an integer flag if the DLL has no nodes
  * @param[in]   dll     A pointer to the DLL whose length needs to be checked
- * @return      0 if DLL has ZERO nodes
- *              1 if DLL has at least ONE node
+ * @return      1 if DLL has ZERO nodes
+ *              0 if DLL has at least ONE node
 */
 int 
 dll_is_empty(dll_list_t *dll) {
     assert(dll != NULL);
-    return (dll->length == EMPTY_LIST);
+    return ((dll->head == NULL) && (dll->tail == NULL));
 }
 
 /* -------------------------------------------------------------------------- */
@@ -99,14 +97,13 @@ dll_insert_head(dll_list_t *dll, void *new_data) {
     new_head->prev = (dll_node_t *)NULL;
 
     // EXCEPTION: This is the 1st node insertion in the DLL
-    if (dll->length == NULL) {
+    if (dll_is_empty(dll)) {
         dll->tail = new_head;
 
     } else {
         dll->head->prev = new_head;
     }
     dll->head = new_head;
-    dll->length++;
     return dll;
 }
 
@@ -139,7 +136,6 @@ dll_insert_tail(dll_list_t *dll, void *new_data) {
         dll->tail->next = new_tail;
         dll->tail = new_tail;
     }
-    dll->length++;
     return dll;
 }
 
@@ -166,7 +162,6 @@ dll_delete_head(dll_list_t *dll) {
         dll->head->prev = NULL;
     }
     free(old_head);
-    dll->length--;
     return dll;
 }
 
@@ -193,7 +188,6 @@ dll_delete_tail(dll_list_t *dll) {
         dll->tail->next = (dll_node_t *)NULL;
     }
     free(old_foot);
-    dll->length--;
     return dll;
 }
 
@@ -259,6 +253,34 @@ dll_node_search(dll_list_t *dll, int (*cmp_fn)(void*, void*), void *target_data)
 
 /**
  * @brief       RECURSIVELY reverses the node ORDER in a DLL
+ * @param[out]  dll     The DLL whose nodes order is to be reversed
+ * @param[in]   first   The 1st node in the input SLL; ALWAYS pass
+ *                      input as 'dll->head'
+ * @note        Call function as: dll_recursive_reverse(dll, dll->head)
+*/
+void dll_recursive_reverse(dll_list_t *dll, dll_node_t *first) {
+
+    // EXCEPTION: DLL is EMPTY
+    if (first == NULL) return;
+
+    // BASE CASE: Reached the TAIL node of the DLL
+    if (first->next == NULL) {
+        dll->tail = dll->head;
+        dll->head = first;
+        return;
+    }
+    /* RECURSIVE CASE: Keep traversing the DLL while adjusting the .next &
+                       .prev pointers until we have reached the TAIL node */
+    dll_node_t *next_node = first->next;
+    first->next = first->prev;
+    first->prev = next_node;
+    dll_recursive_reverse(dll, first->prev);
+}
+
+/* -------------------------------------------------------------------------- */
+
+/**
+ * @brief       ITERATIVELY reverses the node ORDER in a DLL
  * @param[out]  dll     The DLL whose nodes order is to be reversed
 */
 void 

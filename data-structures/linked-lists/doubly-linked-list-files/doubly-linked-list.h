@@ -9,7 +9,6 @@
 */
 /* -------------------------------------------------------------------------- */
 
-#define EMPTY_LIST 0
 #define CMP_FN_EQUAL 0
 
 /* -------------------------------------------------------------------------- */
@@ -25,7 +24,6 @@ typedef struct dll_node_t {
 typedef struct dll_list_t {
     dll_node_t          *head;      /* Node at the START of the SDLL */
     dll_node_t          *tail;      /* Node at the END of the DLL */
-    unsigned int        length;     /* Number of DLL nodes */
 } dll_list_t;
 
 /* -------------------------------------------------------------------------- */
@@ -45,7 +43,7 @@ dll_node_t *dll_get_head(dll_list_t *dll);
 dll_node_t *dll_get_tail(dll_list_t *dll);
 dll_node_t *dll_node_search(dll_list_t *dll, int (*cmp_fn)(void*, void*), void *target_data);
 
-dll_node_t *dll_recursive_reverse(dll_list_t *dll, dll_node_t *first);
+void dll_recursive_reverse(dll_list_t *dll, dll_node_t *first); 
 void dll_iterative_reverse(dll_list_t *dll);
 
 /* -------------------------------------------------------------------------- */
