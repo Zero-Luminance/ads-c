@@ -260,8 +260,9 @@ sll_node_search(sll_list_t *sll, int (*cmp_fn)(void*, void*), void *target_data)
 /**
  * @brief       RECURSIVELY reverses the node ORDER in a SLL
  * @param[out]  sll     The SLL whose nodes are to be reversed
- * @param[in]   first   The 1st node in the input SLL
- * @note        Call function as: sll_recursive_reverse(sll, sll->head);
+ * @param[in]   first   The 1st node in the input SLL; ALWAYS pass
+ *                      input as 'sll->head'
+ * @note        Call function as: sll_recursive_reverse(sll, sll->head)
  * Credits:     https://stackoverflow.com/questions/14080758/reversing-a-linkedlist-recursively-in-c
 */
 sll_node_t* 
@@ -270,13 +271,13 @@ sll_recursive_reverse(sll_list_t *sll, sll_node_t *first) {
     // SLL is EMPTY:
     if (first == NULL) return NULL;
 
-    // BASE CASE: 1 node remains in SLL:
+    // BASE CASE: Reached the TAIL node of the DLL
     if (first->next == NULL) {
         sll->tail = sll->head;
         sll->head = first;
         return first;
     }
-    /* RECURSIVE CASE: Keep traversing SLL to TAIL node */
+    // RECURSIVE CASE: Keep traversing SLL to TAIL node
     sll_node_t *rest = sll_recursive_reverse(sll, first->next);
 
     /* NOTES: 
