@@ -251,23 +251,15 @@ dll_node_search(dll_list_t *dll, int (*cmp_fn)(void*, void*), void *target_data)
 
 /* -------------------------------------------------------------------------- */
 
-/**
- * @brief       RECURSIVELY reverses the node ORDER in a DLL
- * @param[out]  dll     The DLL whose nodes order is to be reversed
- * @param[in]   first   The 1st node in the input SLL; ALWAYS pass
- *                      input as 'dll->head'
- * @note        Call function as: dll_recursive_reverse(dll, dll->head)
-*/
 void dll_recursive_reverse(dll_list_t *dll, dll_node_t *first) {
 
-    // EXCEPTION: DLL is EMPTY
+    // EXCEPTION: DLL is EMPTY or has FINSIHED reversing DLL
     if (first == NULL) return;
 
     // BASE CASE: Reached the TAIL node of the DLL
     if (first->next == NULL) {
         dll->tail = dll->head;
         dll->head = first;
-        return;
     }
     /* RECURSIVE CASE: Keep traversing the DLL while adjusting the .next &
                        .prev pointers until we have reached the TAIL node */
