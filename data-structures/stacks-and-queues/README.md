@@ -81,7 +81,7 @@
 <figure>
     <table>
         <tr>
-            <td><img src="assets/markdown-images/stacks-and-queues-images/stack-empty-array-p233.png" alt="Pseudo-code for stack-empty-array function "></td>
+            <td><img src="../../assets/markdown-images/stacks-and-queues-images/stack-empty-array-p233.png" alt="Pseudo-code for stack-empty-array function "></td>
             <td><img src="../../assets/markdown-images/stacks-and-queues-images/stack-push-array-p233.png" alt="Pseudo-code for  stack-push-array function"></td>
             <td><img src="../../assets/markdown-images/stacks-and-queues-images/stack-pop-array-p233.png" alt="Pseudo-code for stack-pop-array function"></td>
         </tr>
