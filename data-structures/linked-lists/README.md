@@ -1,13 +1,19 @@
 # LINKED LISTS
 
 ## Directory Contents:
-1) [Introduction](#introduction)
-2) [Singly Linked Lists (SLL)](#singly-linked-lists)
+1) [Linked List Implementations](#linked-list-implementations)
+2) [Introduction](#introduction)
+3) [Singly Linked Lists (SLL)](#singly-linked-lists)
     -  [SLL Operation Runtimes](#sll-operation-runtimes)
-3) [Doubly Linked Lists (DLL)](#doubly-linked-lists)
+4) [Doubly Linked Lists (DLL)](#doubly-linked-lists)
     -  [DLL Operation Runtimes](#dll-operation-runtimes)
-4) [Circular Linked Lists (CLL)](#circular-linked-lists)
-5) [Comparing Arrays & Linked Lists](#comparing-arrays--linked-lists)
+5) [Circular Linked Lists (CLL)](#circular-linked-lists)
+6) [Comparing Arrays & Linked Lists](#comparing-arrays--linked-lists)
+
+## Linked List Implementations:
+1. [Singly Linked List (SLL)](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/linked-lists/singly-linked-list-files)
+2. [Doubly Linked List (DLL)](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/linked-lists/doubly-linked-list-files)
+3. [Circular Linked Lists (CLL)](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/linked-lists/circular-linked-list-files)
 
 ## Introduction:
 - ***‘Linked Lists’*** are a sequence of nodes containing:
