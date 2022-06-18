@@ -14,7 +14,7 @@
     - Singly (SLL)
     - Doubly (DLL)
     - Circular (CLL)
-4. [Sets & Dictionaries](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/dictionaries)
+4. [Sets & Dictionaries](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/sets-and-dictionaries)
     - Hash Tables
 5. [Stacks & Queues](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues)
 6. [Priority Queues](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/priority-queues)
