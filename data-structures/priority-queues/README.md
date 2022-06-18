@@ -14,13 +14,13 @@
 - [Singly Linked List Dictionary (SLLD)]()
 
 ## Priority Queue Introduction:
-- ***‘Priority Queues’*** is an ABSTRACT data structure that operates similar to a queue BUT assigns a PRIORITY value to each item
-- ***‘Priority Value’*** or ***‘Key’*** dictates which elements leave the queue first; HIGHER priority corresponds to EARLIER removal
-- NOTE: can only be implemented with data that is COMPARABLE
+- ***‘Priority Queues’*** is an _ABSTRACT_ data structure that operates similar to a queue _BUT_ assigns a _PRIORITY_ value to each item
+- ***‘Priority Value’*** or ***‘Key’*** dictates which elements leave the queue first; _HIGHER_ priority corresponds to _EARLIER_ removal
+- _NOTE:_ can only be implemented with data that is _COMPARABLE_
 
 ## Types Of Priority Queues:
-- ***‘Maximum (MAX) Priority Queue’*** assigns items with HIGHER keys to have HIGHER priority (see image below)
-- ***‘Minimum (MIN) Priority Queue’*** assigns items with LOWER keys to have HIGHER priority
+- ***‘Maximum (MAX) Priority Queue’*** assigns items with _HIGHER_ keys to have _HIGHER_ priority (see image below)
+- ***‘Minimum (MIN) Priority Queue’*** assigns items with _LOWER_ keys to have _HIGHER_ priority
 <figure>
     <img src="../../assets/markdown-images/priority-queues-images/priority-queue-intro.png" alt="MAX Priority Queue Diagram">
     <figcaption>Source: <a href="https://afteracademy.com/blog/priority-queues">AfterAcademy</a></figcaption>
