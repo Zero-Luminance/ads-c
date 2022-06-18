@@ -68,7 +68,7 @@
 - Each key has a UNIQUE value (i.e. no duplicates)
 - Each key CORRESPONDS to ONLY ONE value
 <figure>
-    <img src="../../assets/markdown-images/sets-and-dictionaries-images/" alt="Dictionary key-value combinations">
+    <img src="../../assets/markdown-images/sets-and-dictionaries-images/dictionary-keys-values.png" alt="Dictionary key-value combinations">
     <figcaption>Source: <a href="https://www.youtube.com/watch?v=j0cPnbtp1_w">NullPointer Exception (YouTube)</a></figcaption>
 </figure>
 
@@ -191,6 +191,6 @@
 - ‘Hash Table’ (i.e. storage in the diagram below) is an array that relies on keys to access it’s values
 - ‘Collision’ occurs when two or more keys map to the SAME index
 <figure>
-    <img src="../../assets/markdown-images/sets-and-dictionaries-images/hash-table-diagram" alt="Hash Table Diagram">
+    <img src="../../assets/markdown-images/sets-and-dictionaries-images/hash-table-diagram.png" alt="Hash Table Diagram">
     <figcaption>Source: <a href="https://khalilstemmler.com/blogs/data-structures-algorithms/hash-tables/">khalilstemmler.com</a></figcaption>
 </figure>
