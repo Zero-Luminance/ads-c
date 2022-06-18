@@ -14,8 +14,17 @@
     - Singly (SLL)
     - Doubly (DLL)
     - Circular (CLL)
-3. [Stacks & Queues](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues)
-4. [Dictionaries](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/dictionaries)
+4. [Sets & Dictionaries](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/dictionaries)
+    - Hash Tables
+5. [Stacks & Queues](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/stacks-and-queues)
+6. [Priority Queues](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/priority-queues)
+    - Binary Heaps
+7. [Trees](https://github.com/Zero-Luminance/ads-c/tree/main/data-structures/trees)
+    - Binary Search Trees (Unbalanced)
+    - AVL Trees (Self-Balancing)
+    - Red-Black Trees (Self-Balancing)
+    - Trie Radix
+    - Van Emde Boas Trees
 
 ## Defining Data Structures:
 - ***‘Data Structures’*** involves methods of storing data so as to enable efficient ways of accessing or modifying said data
