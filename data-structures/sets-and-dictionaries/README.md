@@ -16,11 +16,11 @@
 - [Singly Linked List Dictionary (SLLD)]()
 
 ## Sets:
-- ‘Set’ is an ABSTRACT data type that stores UNIQUE values WITHOUT any ORDER; a computer science implementation of a mathematical finite set
-- ‘Dynamic Sets’ are sets that that GROW or SHRINK over time & has the following TYPES of OPERATIONS:
-    - ‘Queries’ return information about a set
-    - ‘Modifying Operations’ change the values in a set
-- SET IMPLEMENTATIONS: stacks, queues, dictionaries, linked lists, rooted trees, binary trees, AVL trees, red black trees, etc
+- ***‘Set’*** is an _ABSTRACT_ data type that stores _UNIQUE_ values _WITHOUT_ any _ORDER_; a computer science implementation of a mathematical finite set
+- ***‘Dynamic Sets’*** are sets that that _GROW_ or _SHRINK_ over time & has the following _TYPES_ of _OPERATIONS_:
+    - ***‘Queries’*** return information about a set
+    - ***‘Modifying Operations’*** change the values in a set
+- _SET IMPLEMENTATIONS:_ stacks, queues, dictionaries, linked lists, rooted trees, binary trees, AVL trees, red black trees, etc
 
 ### Operations On A Dynamic Set:
 <table>
@@ -55,18 +55,18 @@
 <br>
 
 ## Dictionaries:
-- ‘Dictionaries’ (a.k.a. ‘maps’ or ‘associative arrays’) is an ABSTRACT data type & type of DYNAMIC SET where data is accessed/indexed using keys; ‘key-value’ PAIR relationship
-- MANDATORY OPERATIONS: search(D, k), Insert(D, x) & Delete(D, x)
+- ***‘Dictionaries’*** (a.k.a. ‘maps’ or ‘associative arrays’) is an _ABSTRACT_ data type & type of _DYNAMIC SET_ where data is accessed/indexed using keys; ***‘key-value’*** _PAIR_ relationship
+- _MANDATORY OPERATIONS:_ search(D, k), Insert(D, x) & Delete(D, x)
 <figure>
     <img src="../../assets/markdown-images/sets-and-dictionaries-images/dictionary-diagram.png" alt="Dictionary Diagram">
     <figcaption>Source: <a href="https://www.datacamp.com/tutorial/python-dictionaries">datacamp</a></figcaption>
 </figure>
 
 ### Dictionary Properties:
-- ‘Keys’ can be of any PRIMITIVE data type
-- ‘Values’ can be ANY data type or data structure
-- Each key has a UNIQUE value (i.e. no duplicates)
-- Each key CORRESPONDS to ONLY ONE value
+- ***‘Keys’*** can be of any _PRIMITIVE_ data type
+- ***‘Values’*** can be ANY data type or data structure
+- Each key has a _UNIQUE_ value (i.e. no duplicates)
+- Each key _CORRESPONDS_ to ONLY ONE value
 <figure>
     <img src="../../assets/markdown-images/sets-and-dictionaries-images/dictionary-keys-values.png" alt="Dictionary key-value combinations">
     <figcaption>Source: <a href="https://www.youtube.com/watch?v=j0cPnbtp1_w">NullPointer Exception (YouTube)</a></figcaption>
@@ -103,8 +103,8 @@
 
 
 ### Runtimes For Dictionary Arrays:
-- Given an ARRAY ‘A’ of SIZE ’n’ elements, & new ITEM ‘x'
-- ‘✱’ (Array Unsorted: Deletion O(n)) write over the deleted item at it’s index with the LAST element, n - 1, & then decrementing ’n’ by 1
+- Given an _ARRAY_ ***‘A’*** of _SIZE_ ***’n’*** elements, & new _ITEM_ ***‘x'***
+- ***‘✱’*** (Array Unsorted: Deletion ***O(n)***) write over the deleted item at it’s index with the _LAST_ element, n - 1, & then decrementing ***’n’*** by 1
 <table>
     <tr>
         <th scope="col">DICTIONARY ARRAY OPERATION:</th>
@@ -187,9 +187,9 @@
 <br>
 
 ### Introduction To Hash Tables:
-- ‘Hash Function’ uses an algorithm that converts/maps keys into indexes that are used to access their corresponding value
-- ‘Hash Table’ (i.e. storage in the diagram below) is an array that relies on keys to access it’s values
-- ‘Collision’ occurs when two or more keys map to the SAME index
+- ***‘Hash Function’*** uses an algorithm that converts/maps keys into indexes that are used to access their corresponding value
+- ***‘Hash Table’*** _(i.e. storage in the diagram below)_ is an array that relies on keys to access it’s values
+- ***‘Collision’*** occurs when two or more keys map to the _SAME_ index
 <figure>
     <img src="../../assets/markdown-images/sets-and-dictionaries-images/hash-table-diagram.png" alt="Hash Table Diagram">
     <figcaption>Source: <a href="https://khalilstemmler.com/blogs/data-structures-algorithms/hash-tables/">khalilstemmler.com</a></figcaption>
