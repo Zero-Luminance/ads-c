@@ -1,0 +1,3 @@
+# SLLQ IMPLEMENTATION NOTES
+
+## Overview:
