@@ -72,7 +72,7 @@ sll_free(sll_list_t *sll) {
 int 
 sll_is_empty(sll_list_t *sll) {
     assert(sll != NULL);
-    return (sll->length == EMPTY_LIST);
+    return ((sll->head == NULL) && (sll->tail == NULL));
 }
 
 /* -------------------------------------------------------------------------- */
@@ -97,10 +97,9 @@ sll_insert_head(sll_list_t *sll, void *new_data) {
     sll->head = new_head;
 
     // EXCEPTION: 1st insertion into the SLL
-    if (sll->length == EMPTY_LIST) {
+    if (sll_is_empty(sll)) {
         sll->tail = new_head;
     }
-    sll->length++;
     return sll;
 }
 
@@ -133,7 +132,6 @@ sll_insert_tail(sll_list_t *sll, void *new_data) {
         sll->tail->next = new_tail;
         sll->tail = new_tail;
     }
-    sll->length++;
     return sll;
 }
 
@@ -157,7 +155,6 @@ sll_delete_head(sll_list_t *sll) {
         sll->tail = (sll_node_t *)NULL;
     }
     free(old_head);
-    sll->length--;
     return sll;
 }
 
@@ -189,7 +186,6 @@ sll_delete_tail(sll_list_t *sll) {
         sll->tail = tmp;
     }
     free(old_tail);
-    sll->length--;
     return sll;
 }
 
