@@ -24,7 +24,6 @@ typedef struct sll_node_t {
 typedef struct sll_list_t {
     sll_node_t          *head;      /* Node at the START of the SLL */
     sll_node_t          *tail;      /* Node at the END of the SLL */
-    unsigned int        length;     /* Number of SLL nodes */
 } sll_list_t;
 
 /* -------------------------------------------------------------------------- */

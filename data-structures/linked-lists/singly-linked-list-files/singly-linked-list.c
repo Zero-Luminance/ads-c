@@ -30,7 +30,6 @@ sll_init(void) {
 
     // Initialise parameters & return list address
     new_sll->head = new_sll->tail = (sll_node_t *)NULL;
-    new_sll->length = EMPTY_LIST;
     return new_sll;
 }
 
@@ -56,7 +55,6 @@ sll_free(sll_list_t *sll) {
         }
         free(current_node);
         current_node = next_node;
-        sll->length--;
     }
 
     // Free the list from the heap
