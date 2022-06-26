@@ -21,7 +21,7 @@
  * @return  A pointer to the address of the newly created & initalised DLL
 */
 dll_list_t* 
-dll_init(void) {
+dll_init(int cmp(void*, void*)) {
 
     // Create space for the list on the heap;
     dll_list_t *new_dll;
@@ -29,6 +29,7 @@ dll_init(void) {
     assert(new_dll != NULL);
 
     // Initialise parameters & return list address
+    new_dll->cmp = cmp;
     new_dll->head = new_dll->tail = (dll_node_t *)NULL;
     return new_dll;
 }
@@ -227,7 +228,7 @@ dll_get_tail(dll_list_t *dll) {
  *              A sll_node_t NULL value to indicate that no matches were found
 */
 dll_node_t* 
-dll_node_search(dll_list_t *dll, int (*cmp_fn)(void*, void*), void *target_data) {
+dll_iterative_search(dll_list_t *dll, void *target_data) {
 
     dll_node_t *current_node;
     current_node = dll->head;
@@ -240,7 +241,7 @@ dll_node_search(dll_list_t *dll, int (*cmp_fn)(void*, void*), void *target_data)
              0  current_node->data is EQUAL TO target_data
              1  current_node->data is GREATER THAN to target_data
          */
-        if (cmp_fn(current_node->data, target_data) == CMP_FN_EQUAL) {
+        if (dll->cmp(current_node->data, target_data) == CMP_FN_EQUAL) {
             return current_node;
         }
         current_node = current_node->next;
