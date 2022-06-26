@@ -21,7 +21,7 @@
  * @return  A pointer to the address of the newly created & initalised SLL
 */
 sll_list_t* 
-sll_init(void) {
+sll_init(int cmp(void*, void*)) {
 
     // Create space for the list on the heap
     sll_list_t *new_sll;
@@ -29,6 +29,7 @@ sll_init(void) {
     assert(new_sll != NULL);
 
     // Initialise parameters & return list address
+    new_sll->cmp = cmp;
     new_sll->head = new_sll->tail = (sll_node_t *)NULL;
     return new_sll;
 }
@@ -50,8 +51,8 @@ sll_free(sll_list_t *sll) {
     // Traverse the SLL from the start & free contents from the heap
     while (current_node != NULL) {  
         next_node = current_node->next;
-        if (current_node->data != NULL) {
-            free(current_node->data);
+        if (current_node->key != NULL) {
+            free(current_node->key);
         }
         free(current_node);
         current_node = next_node;
@@ -92,7 +93,7 @@ sll_insert_head(sll_list_t *sll, void *new_data) {
     sll_node_t *new_head;
     new_head = (sll_node_t *)malloc(sizeof(sll_node_t));
     assert((sll != NULL) && (new_head != NULL));
-    new_head->data = new_data;
+    new_head->key = new_data;
     new_head->next = sll->head;
     sll->head = new_head;
 
@@ -120,7 +121,7 @@ sll_insert_tail(sll_list_t *sll, void *new_data) {
     sll_node_t *new_tail;
     new_tail = (sll_node_t *)malloc(sizeof(sll_node_t));
     assert((sll != NULL) && (new_tail != NULL));
-    new_tail->data = new_data;
+    new_tail->key = new_data;
     new_tail->next = (sll_node_t *)NULL;
     
     // CASE 1: 1st insertion into the SLL
@@ -227,7 +228,7 @@ sll_get_tail(sll_list_t *sll) {
  *              A sll_node_t NULL value to indicate that no matches were found
 */
 sll_node_t* 
-sll_node_search(sll_list_t *sll, int (*cmp_fn)(void*, void*), void *target_data) {
+sll_iterative_search(sll_list_t *sll, void *target_data) {
 
     sll_node_t *current_node;
     current_node = sll->head;
@@ -240,7 +241,7 @@ sll_node_search(sll_list_t *sll, int (*cmp_fn)(void*, void*), void *target_data)
              0  current_node->data is EQUAL TO target_data
              1  current_node->data is GREATER THAN to target_data
          */
-        if (cmp_fn(current_node->data, target_data) == CMP_FN_EQUAL) {
+        if (sll->cmp(current_node->key, target_data) == CMP_FN_EQUAL) {
             return current_node;
         }
         current_node = current_node->next;
