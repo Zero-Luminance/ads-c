@@ -6,23 +6,33 @@
 */
 /* -------------------------------------------------------------------------- */
 
-// Conncting these nodes creates a BST
+/**
+ * @brief   A NODE when linked with others of the same kind creates a BST
+ * @param   key     The DATA stored within each BST node
+ * @param   parent  Pointer to the descendant node
+ * @param   left    Pointer to the LEFT child (i.e. LESS)
+ * @param   right   Pointer to the RIGHT child (i.e. GREATER)
+*/
 typedef struct bst_node_t {
-    void                *key;       // The DATA to be stored in the BST node
-    struct bst_node_t   *parent;    // Pointer to the DESCENDANT node
-    struct bst_node_t   *left;      // Left CHILD pointer (i.e. LESS)
-    struct bst_node_t   *right;     // Right CHILD pointer (i.e. GREATER)
+    void                *key;
+    struct bst_node_t   *parent;
+    struct bst_node_t   *left;
+    struct bst_node_t   *right;
 } bst_node_t;
 
-// A mechansim to interface the BST
+/**
+ * @brief   A mechanism to interface with the BST
+ * @param   root    Pointer to the ROOT or 1st node in the BST
+ * @param   cmp_fn  Helps compare the keys within BST nodes
+*/
 typedef struct bst_tree_t {
-    struct bst_node_t   *root;                      // The 1st node in the BST
-    int                 (*cmp_fn)(void*, void*);    // Compares 'key' equality
+    struct bst_node_t   *root;
+    int                 (*cmp_fn)(void*, void*);
 } bst_tree_t;
 
 /* -------------------------------------------------------------------------- */
 
-// BST Operations:
+// BST OPERATIONS:
 bst_tree_t *bst_init(void);
 void bst_free(bst_tree_t *bst);
 int bst_is_empty(bst_tree_t *bst);
