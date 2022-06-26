@@ -33,7 +33,7 @@ void bst_postorder(bst_tree_t *bst, void action(void*));
 
 bst_node_t *bst_search(bst_tree_t *bst, void *search_key);
 static bst_node_t *bst_recursive_search(bst_node_t *root, void *search_key, int cmp(void*, void*));
-static bast_node_t *bst_iterative_search(bst_node_t *root, void *search_key, int cmp(void*, void*));
+static bst_node_t *bst_iterative_search(bst_node_t *root, void *search_key, int cmp(void*, void*));
 
 bst_node_t *bst_minimum(bst_tree_t *bst);
 bst_node_t *bst_maximum(bst_tree_t *bst);
