@@ -21,16 +21,18 @@
  * @return  A pointer to the address of the newly created & initalised SLLQ
 */
 sllq_list_t* 
-sllq_init(void) {
+sllq_init(int cmp(void*, void*)) {
     
     // Create space for the list in the heap
     sllq_list_t *new_sllq;
     new_sllq = (sllq_list_t *)malloc(sizeof(sllq_list_t));
     assert(new_sllq != NULL);
 
+    // Assign the function pointer
+    new_sllq->cmp = cmp;
+
     // Initialise parameters & return list address
     new_sllq->head = new_sllq->tail = (sllq_list_t *)NULL;
-    new_sllq->length = EMPTY_LIST;
     return new_sllq;
 }
 
@@ -51,12 +53,11 @@ sllq_free(sllq_list_t *sllq) {
     // Traverse the SLLQ from the start & free contents from the heap
     while (current_node != NULL) {
         next_node = current_node->next;
-        if (current_node->data != NULL) {
-            free(current_node->data);
+        if (current_node->key != NULL) {
+            free(current_node->key);
         }
         free(current_node);
         current_node = next_node;
-        sllq->length--;
     }
     // Free the list from the heap
     free(sllq);
@@ -73,7 +74,7 @@ sllq_free(sllq_list_t *sllq) {
 int 
 sllq_is_empty(sllq_list_t *sllq) {
     assert(sllq != NULL);
-    return (sllq->length == EMPTY_LIST);
+    return ((sllq->head == NULL) && (sllq->tail == NULL));
 }
 
 /* -------------------------------------------------------------------------- */
@@ -90,7 +91,7 @@ sllq_enqueue(sllq_list_t *sllq, void *new_data) {
     sllq_node_t *new_tail;
     new_tail = (sllq_node_t *)malloc(sizeof(sllq_node_t));
     assert(new_tail != NULL);
-    new_tail->data = new_data;
+    new_tail->key = new_data;
     new_tail->next = (sllq_node_t *)NULL;
 
     // CASE 1: Linked list queue is EMPTY
@@ -102,7 +103,6 @@ sllq_enqueue(sllq_list_t *sllq, void *new_data) {
         sllq->tail->next = new_tail;
         sllq->tail = new_tail;
     }
-    sllq->length++;
     return sllq->tail;
 }
 
@@ -126,7 +126,6 @@ sllq_dequeue(sllq_list_t *sllq) {
         sllq->tail = (sllq_node_t *)NULL;
     }
     free(old_head);
-    sllq->length--;
     return sllq->head;
 }
 
@@ -167,7 +166,7 @@ sllq_get_tail(sllq_list_t *sllq) {
  *              A sllq_node_t NULL value to indicate that no matches were found
 */
 sllq_node_t* 
-sllq_node_search(sllq_list_t *sllq, int (*cmp_fn)(void*, void*), void *target_data) {
+sllq_iterative_search(sllq_list_t *sllq, void *target_data) {
 
     sllq_node_t *current_node;
     current_node = sllq->head;
@@ -180,7 +179,7 @@ sllq_node_search(sllq_list_t *sllq, int (*cmp_fn)(void*, void*), void *target_da
              0  current_node->data is EQUAL TO target_data
              1  current_node->data is GREATER THAN to target_data
         */
-        if (cmp_fn(current_node->data, target_data) == CMP_FN_EQUAL) {
+        if (sllq->cmp(current_node->key, target_data) == CMP_FN_EQUAL) {
             return current_node;
         }
         current_node = current_node->next;
