@@ -14,23 +14,35 @@
 
 /* -------------------------------------------------------------------------- */
 
-// Connecting these creates a SLLQ:
+/**
+ * @brief   A NODE when linked with others of the same kind creates a SLLQ
+ * @param   key     Pointer to the DATA associated with the SLLQ node
+ * @param   next    Pointer to the next NODE in the SLLQ
+*/
 typedef struct sllq_node_t {
-    void                *data;      /* Replace 'void' with desired data type */
-    struct sllq_node_t   *next;      /* The address of the next SLLQ node */
+    void                *key;
+    struct sllq_node_t  *next;
 } sllq_node_t;
 
-// Keeping track of SLLQ data:
+/**
+ * @brief   A mechanism to interace with the SLLQ
+ * @param   head    Node at the START of the SLLQ
+ * @param   tail    Node at the END of the SLLQ
+ * @param   cmp     Function pointer to COMPARE keys in each node:
+ *                  -1 1st argument is LESS than 2nd argument
+ *                   0 1st & 2nd arguments are EQUAL
+ *                   1 ast argument is GREATER than 2nd argument
+*/
 typedef struct sllq_list_t {
-    sllq_node_t          *head;      /* Node at the START of the SLLQ */
-    sllq_node_t          *tail;      /* Node at the END of the SLLQ */
-    unsigned int        length;     /* Number of SLLQ nodes */
+    sllq_node_t         *head;
+    sllq_node_t         *tail;
+    int                 (*cmp)(void*, void*);
 } sllq_list_t;
 
 /* -------------------------------------------------------------------------- */
 
 // SLLQ Operations:
-sllq_list_t *sllq_init(void);
+sllq_list_t *sllq_init(int cmp(void*, void*));
 void sllq_free(sllq_list_t *sllq);
 int sllq_is_empty(sllq_list_t *sllq);
 
@@ -39,6 +51,7 @@ sllq_node_t *sllq_dequeue(sllq_list_t *sllq);
 
 sllq_node_t *sllq_get_head(sllq_list_t *sllq);
 sllq_node_t *sllq_get_tail(sllq_list_t *sllq);
-sllq_node_t *sllq_node_search(sllq_list_t *sllq, int (*cmp_fn)(void*, void*), void *target_data);
+
+sllq_node_t *sllq_iterative_search(sllq_list_t *sllq, void *target_data);
 
 /* -------------------------------------------------------------------------- */
