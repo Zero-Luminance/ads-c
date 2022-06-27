@@ -33,7 +33,7 @@ typedef struct bst_tree_t {
 /* -------------------------------------------------------------------------- */
 
 // BST OPERATIONS:
-bst_tree_t *bst_init(void);
+bst_tree_t *bst_init(int cmp(void*, void*));
 void bst_free(bst_tree_t *bst);
 int bst_is_empty(bst_tree_t *bst);
 
