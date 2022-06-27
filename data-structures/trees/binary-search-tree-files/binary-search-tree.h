@@ -26,7 +26,7 @@ typedef struct bst_node_t {
  * @param   cmp_fn  Helps compare the keys within BST nodes
 */
 typedef struct bst_tree_t {
-    struct bst_node_t   *root;
+    bst_node_t          *root;
     int                 (*cmp_fn)(void*, void*);
 } bst_tree_t;
 
